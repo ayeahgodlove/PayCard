@@ -1,0 +1,75 @@
+/* This chapter introduces some of the new features
+   in ES8
+   
+*/
+=>JavaScript let
+=>JavaScript const
+=>JavaScript Arrow Functions e.g const startApp = () =>{ };
+=>JavaScript classes
+=>Default parameter values
+=>Array.find()
+=>Array.findIndex()
+=>Exponentiation (**) i.e EcmaScript 2016
+NB: global scope, function scope and block scope(introduced from 2015).
+-Variables declared with the let keyword can have block scope
+-Varaibles declared iniside a block {} cannot be accessed from outside the block
+
+//Older JavaScript example
+var z = function addTwo(x, y) {
+	return x + y;
+}
+
+//ES5 JavaScript example
+var x = function(x, y) {
+	return x + y;
+}
+
+//ES6 JavaScript example
+const x = (x, y) => x + y;
+
+//ES6 JavaScript Class example
+class Car {
+	constructor(brand) {
+		this.carname = brand;
+	}
+}
+
+//creating an object
+mycar = new Car("Ford");
+
+//Array.find()
+
+-The find() method returns the value of the 
+  first array element that passes a test function
+-Example 
+
+let numbers = [1, 2, 3, 5, 10];
+let first = numbers.find(myfunction);
+
+function myFunction(value, index, array) {
+	return value > 18;
+}
+
+NB: - the function takes 3 arguments; item value, item index, array itself
+
+//Array.findIndex()
+This method returns the index of the first array element that passes 
+a test function.
+-Example
+
+
+let numbers = [1, 2, 3, 5, 10];
+let first = numbers.findIndex(myfunction);
+
+function myFunction(value, index, array) {
+	return value > 18;
+}
+NB: - the function takes 3 arguments; item value, item index, array itself
+
+----------Using the Selector API------------------------
+Using the Selector API instead of the getElementBy... or getElementsBy... APIs in ES6. 
+-Document.querySelector()
+The Document method querySelector() returns the first Element within the document that matches the specified selector, 
+or group of selectors. If no matches are found, null is returned.
+
+element = document.querySelector(selectors);
